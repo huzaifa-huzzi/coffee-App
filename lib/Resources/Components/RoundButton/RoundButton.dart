@@ -9,10 +9,14 @@ class RoundButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.sizeOf(context).height * 1;
+    final width = MediaQuery.sizeOf(context).width * 1;
     return InkWell(
       onTap: onTap,
       child: Container(
-          padding:const  EdgeInsets.symmetric(vertical: 15,horizontal: 30),
+        width: width * .6,
+        height:  height * .08,
+        padding:const  EdgeInsets.symmetric(vertical: 15,horizontal: 30),
       decoration: BoxDecoration(
       color: AppColors.orangeColor,
       borderRadius: BorderRadius.circular(10),

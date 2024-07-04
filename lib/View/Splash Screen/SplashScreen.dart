@@ -37,10 +37,10 @@ class _SplashscreenState extends State<Splashscreen> {
             ),),
             Column(
               children: [
-               Text('Feeling Low ? Take a sip of coffee',style: TextStyle(color: AppColors.whiteColor.withOpacity(0.8,),fontSize: 18,fontWeight: FontWeight.w500,letterSpacing: 1,),),
-                SizedBox(height:  height * .8,),
+               Text('Feeling Low ? Take a sip of coffee',style: TextStyle(color: AppColors.whiteColor.withOpacity(0.9,),fontSize: 18,fontWeight: FontWeight.w500,letterSpacing: 1,),),
+                SizedBox(height:  height * .05,),
                 RoundButton(title: 'Get Start', onTap: (){
-                  Get.toNamed(RouteName);
+                  Get.toNamed(RouteName.homeScreen);
                 })
             ],)
           ],
