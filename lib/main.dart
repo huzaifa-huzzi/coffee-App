@@ -1,5 +1,9 @@
+import 'package:coffee_app/Resources/Color/colors.dart';
+import 'package:coffee_app/View/Splash%20Screen/SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'Routes/RoutesInitilizing.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +14,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return  GetMaterialApp(
       title: 'Coffee App',
+      theme: ThemeData(
+        scaffoldBackgroundColor: AppColors.blackColor,
+      ),
       debugShowCheckedModeBanner: false,
+      home:const  Splashscreen(),
+      getPages: AppRoutes.appRoutes(),
     );
   }
 }
