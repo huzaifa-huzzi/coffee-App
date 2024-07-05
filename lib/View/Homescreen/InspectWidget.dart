@@ -44,7 +44,46 @@ class _InspectWidgetState extends State<InspectWidget> {
             ),
             child: Column(
               children: [
+                 InkWell(
+                   onTap: (){
+                     
+                   },
+                   child: Container(
+                     margin:const  EdgeInsets.all(10),
+                     child: Image.asset(
+                       "assets/images/${img[i].jpeg}",
+                       width: 120,
+                       height: 120,
+                       fit: BoxFit.contain,
+                     ),
+                   ),
+                 ),
+                Padding(padding:const  EdgeInsets.only(bottom: 8),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        img[i],
+                        style:const  TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            color: AppColors.whiteColor
+                        ),),
+                      Text(
+                        'Best Coffee',
+                        style:  TextStyle(
+                            fontSize: 16,
+                            color: Colors.white60
+                        ),)
 
+                    ]
+
+                  ),
+                ),
+
+                ),
               ],
             ),
 
