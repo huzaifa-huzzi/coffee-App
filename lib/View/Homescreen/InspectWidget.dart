@@ -1,4 +1,5 @@
 import 'package:coffee_app/Resources/Color/colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
@@ -21,6 +22,8 @@ class _InspectWidgetState extends State<InspectWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.sizeOf(context).height * 1;
+    final width = MediaQuery.sizeOf(context).width * 1;
     return GridView.count(
       physics:const  NeverScrollableScrollPhysics(),
         crossAxisCount: 2,
@@ -71,7 +74,8 @@ class _InspectWidgetState extends State<InspectWidget> {
                             fontSize: 18,
                             color: AppColors.whiteColor
                         ),),
-                      Text(
+                      SizedBox(height: height * .09 ,),
+                     const  Text(
                         'Best Coffee',
                         style:  TextStyle(
                             fontSize: 16,
@@ -84,6 +88,33 @@ class _InspectWidgetState extends State<InspectWidget> {
                 ),
 
                 ),
+                Padding(
+                    padding:const  EdgeInsets.symmetric(vertical: 5),
+                     child: Row(
+                       children: [
+                        const  Text(
+                           '\$30',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              color: AppColors.whiteColor
+                            ),
+                         ),
+                         Container(
+                           padding:const  EdgeInsets.all(5),
+                           decoration: BoxDecoration(
+                             color: AppColors.orangeColor,
+                             borderRadius: BorderRadius.circular(20)
+                           ),
+                           child:const  Icon(
+                             CupertinoIcons.add,
+                             size: 20,
+                             color:AppColors.whiteColor ,
+                           ),
+                         )
+                       ],
+                     ),
+                )
               ],
             ),
 
