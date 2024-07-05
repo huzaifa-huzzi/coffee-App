@@ -1,4 +1,5 @@
 import 'package:coffee_app/Resources/Color/colors.dart';
+import 'package:coffee_app/View/Homescreen/InspectWidget.dart';
 import 'package:flutter/material.dart';
 
 
@@ -79,13 +80,13 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                       Tab(text: 'Americano'),
                     ],
                   ),
-                  Expanded(
+                 const  Expanded(
                     child: TabBarView(
                       children: [
-                        Center(child: Text('Hot Coffee Content', style: TextStyle(color: Colors.white))),
-                        Center(child: Text('Cold Coffee Content', style: TextStyle(color: Colors.white))),
-                        Center(child: Text('Cappuccino Content', style: TextStyle(color: Colors.white))),
-                        Center(child: Text('Latte Content', style: TextStyle(color: Colors.white))),
+                        InspectWidget(),
+                        InspectWidget(),
+                        InspectWidget(),
+                        InspectWidget(),
                       ],
                     ),
                   ),
