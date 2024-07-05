@@ -53,7 +53,7 @@ class _InspectWidgetState extends State<InspectWidget> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Image.asset(
-                        "assets/images/${coffees[i]['image']}", // Access image file name from map
+                        "assets/images/${coffees[i]['image']}",
                         width: 120,
                         height: 120,
                         fit: BoxFit.cover,
