@@ -13,7 +13,6 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
 
 
-  @override
   Widget build(BuildContext context) {
     final height = MediaQuery.sizeOf(context).height * 1;
     final width = MediaQuery.sizeOf(context).width * 1;
@@ -26,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           body: SafeArea(
             child: Padding(
               padding: const EdgeInsets.only(top: 15),
-              child: ListView(
+              child: Column(
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -45,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   ),
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                    width: width * .2,
+                    width: width * .8,
                     height: height * .06,
                     decoration: BoxDecoration(
                       color: const Color.fromARGB(255, 50, 54, 56),
@@ -64,18 +63,23 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   ),
                   TabBar(
                     isScrollable: true,
-                    indicatorColor: Colors.orange,
+                    indicator:const  UnderlineTabIndicator(
+                      borderSide: BorderSide(color: Colors.orange, width: 2.0),
+                      insets: EdgeInsets.symmetric(horizontal: 16.0),
+                    ),
+                    indicatorPadding: EdgeInsets.zero,
+                    labelStyle:const  TextStyle(fontSize: 18,fontWeight: FontWeight.w500),
+                    labelPadding:const  EdgeInsets.symmetric(horizontal: 20.0),
                     labelColor: Colors.orange,
-                    unselectedLabelColor: AppColors.whiteColor.withOpacity(0.5),
-                    tabs: [
+                    unselectedLabelColor: Colors.white.withOpacity(0.5),
+                    tabs:const  [
                       Tab(text: 'Hot Coffee'),
                       Tab(text: 'Cold Coffee'),
                       Tab(text: 'Cappuccino'),
-                      Tab(text: 'Latte'),
+                      Tab(text: 'Americano'),
                     ],
                   ),
-                  Container(
-                    height: height * .5,
+                  Expanded(
                     child: TabBarView(
                       children: [
                         Center(child: Text('Hot Coffee Content', style: TextStyle(color: Colors.white))),
