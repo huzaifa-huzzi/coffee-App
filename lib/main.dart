@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  GetMaterialApp(
       title: 'Coffee App',
+      debugShowMaterialGrid: false,
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.blackColor,
       ),
