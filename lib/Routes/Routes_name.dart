@@ -7,6 +7,7 @@ class RouteName{
   //view
   static const String homeScreen= '/HomeScreen';
   static const String dashboardScreen = '/DashboardScreen';
+  static const String detailScreen = '/DetailScreen';
 
 
 

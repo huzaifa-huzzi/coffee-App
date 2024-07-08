@@ -1,6 +1,8 @@
 import 'package:coffee_app/Resources/Color/colors.dart';
+import 'package:coffee_app/Routes/Routes_name.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class InspectWidget extends StatefulWidget {
   const InspectWidget({super.key});
@@ -10,7 +12,6 @@ class InspectWidget extends StatefulWidget {
 }
 
 class _InspectWidgetState extends State<InspectWidget> {
-
   // List of objects to store both display names and image file names
   final List<Map<String, String>> coffees = [
     {'name': 'Latte Coffee', 'image': 'Latte Coffees.jpeg'},
@@ -47,7 +48,13 @@ class _InspectWidgetState extends State<InspectWidget> {
             child: Column(
               children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    // Navigate to the new screen
+                    Get.toNamed(RouteName.detailScreen, arguments: {
+                      'name': coffees[i]['name']!,
+                      'image': coffees[i]['image']!
+                    });
+                  },
                   child: Container(
                     margin: const EdgeInsets.all(10),
                     child: ClipRRect(
