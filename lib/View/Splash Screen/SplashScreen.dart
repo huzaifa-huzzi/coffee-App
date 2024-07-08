@@ -40,7 +40,7 @@ class _SplashscreenState extends State<Splashscreen> {
                Text('Feeling Low ? Take a sip of coffee',style: TextStyle(color: AppColors.whiteColor.withOpacity(0.9,),fontSize: 18,fontWeight: FontWeight.w500,letterSpacing: 1,),),
                 SizedBox(height:  height * .05,),
                 RoundButton(title: 'Get Start', onTap: (){
-                  Get.toNamed(RouteName.homeScreen);
+                  Get.toNamed(RouteName.dashboardScreen);
                 })
             ],)
           ],

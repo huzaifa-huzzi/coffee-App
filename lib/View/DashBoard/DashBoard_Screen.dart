@@ -1,5 +1,8 @@
 import 'package:coffee_app/Resources/Color/colors.dart';
+import 'package:coffee_app/View/Favourite/FavouriteScreen.dart';
 import 'package:coffee_app/View/Homescreen/HomeScreen.dart';
+import 'package:coffee_app/View/Notifications/Notifications.dart';
+import 'package:coffee_app/View/Person/Person.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
@@ -25,6 +28,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
   List<Widget> _buildScreens() {
     return  const [
       HomeScreen(),
+      FavouriteScreen(),
+      NotificationsScreen(),
+      PersonScreen(),
     ];
   }
 
@@ -32,9 +38,24 @@ class _DashboardScreenState extends State<DashboardScreen> {
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-          icon:const Icon(Icons.home,color: Colors.white,),
-          activeColorPrimary:AppColors.orangeColor,
-          inactiveIcon:const Icon(Icons.home,color: Colors.white,)
+          icon:const Icon(Icons.home,color: AppColors.orangeColor,),
+        activeColorPrimary: AppColors.orangeColor,
+          inactiveIcon:const Icon(Icons.home,color:AppColors.whiteColor,)
+      ),
+      PersistentBottomNavBarItem(
+          icon:const Icon(Icons.favorite_outlined,color:AppColors.orangeColor,),
+           activeColorPrimary: AppColors.orangeColor,
+          inactiveIcon:const Icon(Icons.favorite_outlined,color: AppColors.whiteColor,)
+      ),
+      PersistentBottomNavBarItem(
+          icon:const Icon(Icons.notifications,color: AppColors.orangeColor,),
+           activeColorPrimary: AppColors.orangeColor,
+          inactiveIcon:const Icon(Icons.notifications,color: AppColors.whiteColor,)
+      ),
+      PersistentBottomNavBarItem(
+          icon:const Icon(Icons.person,color: AppColors.orangeColor,),
+          activeColorPrimary: AppColors.orangeColor,
+          inactiveIcon:const Icon(Icons.person,color: AppColors.whiteColor,)
       ),
     ];
   }
