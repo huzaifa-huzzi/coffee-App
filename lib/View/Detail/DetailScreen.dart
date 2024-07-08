@@ -55,9 +55,11 @@ class _DetailScreenState extends State<DetailScreen> {
                      child: Column(
                        crossAxisAlignment: CrossAxisAlignment.start,
                        children: [
-                         Text('Best coffee',style: TextStyle(color: Colors.white.withOpacity(0.4),letterSpacing: 3),),
+                         Text('Best coffee',
+                           style: TextStyle(color: Colors.white.withOpacity(0.4),letterSpacing: 3),),
                          SizedBox(height:  height * .01,),
-                         Text(name,style:const  TextStyle(
+                         Text(name,
+                           style:const  TextStyle(
                            fontSize: 25,
                            letterSpacing: 1,
                            color: Colors.white,
