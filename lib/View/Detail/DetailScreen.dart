@@ -1,3 +1,4 @@
+import 'package:coffee_app/Resources/Color/colors.dart';
 import 'package:coffee_app/Routes/Routes_name.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -96,11 +97,13 @@ class _DetailScreenState extends State<DetailScreen> {
                                       ),
                                     ],
                                   ),
-                                )
+                                ),
+                              const  Text('\$ 30.24',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: AppColors.whiteColor),)
+
                              ],
                            ),
-                         )
-
+                         ),
+                         SizedBox(height: height * .02,),
 
                        ],
                      ),
