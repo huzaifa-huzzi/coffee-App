@@ -51,7 +51,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                   SizedBox(height:  height * .05,),
                   Padding(
-                      padding:const EdgeInsets.only(left: 2,right: 40),
+                      padding:const EdgeInsets.only(left: 10,right: 30),
                      child: Column(
                        crossAxisAlignment: CrossAxisAlignment.start,
                        children: [
@@ -65,52 +65,52 @@ class _DetailScreenState extends State<DetailScreen> {
                            color: Colors.white,
                          ),),
                          SizedBox(height:  height * .02,),
-                         Container(
-                           width: width ,
-                           child: Row(
-                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                             children: [
-                                Container(
-                                  padding:const  EdgeInsets.all(15),
-                                  width: 120,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Colors.white.withOpacity(0.4),
-                                    ),
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child:const  Row(
-                                    mainAxisAlignment:MainAxisAlignment.center ,
-                                    children: [
-                                       Icon(
-                                         CupertinoIcons.minus,
-                                         size: 18,
-                                         color: Colors.white,
-                                       ),
-                                      SizedBox(width: 15,),
-                                      Text('2',style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w600),),
-                                      SizedBox(width: 15,),
-                                      Icon(
-                                        CupertinoIcons.plus,
-                                        size: 18,
-                                        color: Colors.white,
+                         Padding(
+                           padding:const  EdgeInsets.only(left: 10),
+                           child: Container(
+                             width: width ,
+                             child: Row(
+                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                               children: [
+                                 Container(
+                                      padding:const  EdgeInsets.all(15),
+                                      width: 120,
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Colors.white.withOpacity(0.4),
+                                        ),
+                                        borderRadius: BorderRadius.circular(20),
                                       ),
-                                    ],
-                                  ),
-                                ),
-                              const  Text('\$ 30.24',style:
-                              TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: AppColors.whiteColor),)
-                             ],
+                                      child:const  Row(
+                                        mainAxisAlignment:MainAxisAlignment.center ,
+                                        children: [
+                                           Icon(
+                                             CupertinoIcons.minus,
+                                             size: 18,
+                                             color: Colors.white,
+                                           ),
+                                          SizedBox(width: 15,),
+                                          Text('2',style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w600),),
+                                          SizedBox(width: 15,),
+                                          Icon(
+                                            CupertinoIcons.plus,
+                                            size: 18,
+                                            color: Colors.white,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                const  Text('\$ 30.24',style:
+                                TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: AppColors.whiteColor),),
+                               ],
+                             ),
                            ),
                          ),
                          SizedBox(height: height * .02,),
-                        Text('Coffee is the major source of antioxidants in the diet.It has many health benefits.',
-                          style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16,color: Colors.white.withOpacity(0.4)),),
+                         Text('Coffee is the major source of antioxidants in the diet.It has many health benefits.',
+                           style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16,color: Colors.white.withOpacity(0.4)),),
                          SizedBox(height: height * .02,),
-                        const  Text('Volume :',style:
-                         TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.white),),
-                         SizedBox(height: height * .02,),
-                         const  Text('60ml :',style:
+                         const  Text('Volume : 60 ml',style:
                          TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.white),),
                        ],
                      ),
