@@ -98,12 +98,15 @@ class _DetailScreenState extends State<DetailScreen> {
                                     ],
                                   ),
                                 ),
-                              const  Text('\$ 30.24',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: AppColors.whiteColor),)
-
+                              const  Text('\$ 30.24',style:
+                              TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: AppColors.whiteColor),)
                              ],
                            ),
                          ),
                          SizedBox(height: height * .02,),
+                        Text('Coffee is the major source of antioxidants in the diet.It has many health benefits.',
+                          style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16,color: Colors.white.withOpacity(0.4)),),
+
 
                        ],
                      ),
