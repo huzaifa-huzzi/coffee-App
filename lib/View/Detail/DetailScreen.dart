@@ -24,7 +24,7 @@ class _DetailScreenState extends State<DetailScreen> {
         body: SingleChildScrollView(
           child: SafeArea(
             child: Padding(
-              padding:const  EdgeInsets.only(top: 30,bottom: 20),
+              padding:const  EdgeInsets.only(top: 50,bottom: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -51,7 +51,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                   SizedBox(height:  height * .05,),
                   Padding(
-                      padding:const EdgeInsets.only(left: 10,right: 30),
+                      padding:const EdgeInsets.only(left: 20,right: 30),
                      child: Column(
                        crossAxisAlignment: CrossAxisAlignment.start,
                        children: [
@@ -65,9 +65,7 @@ class _DetailScreenState extends State<DetailScreen> {
                            color: Colors.white,
                          ),),
                          SizedBox(height:  height * .02,),
-                         Padding(
-                           padding:const  EdgeInsets.only(left: 10),
-                           child: Container(
+                         Container(
                              width: width ,
                              child: Row(
                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -105,13 +103,39 @@ class _DetailScreenState extends State<DetailScreen> {
                                ],
                              ),
                            ),
-                         ),
                          SizedBox(height: height * .02,),
                          Text('Coffee is the major source of antioxidants in the diet.It has many health benefits.',
                            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16,color: Colors.white.withOpacity(0.4)),),
                          SizedBox(height: height * .02,),
                          const  Text('Volume : 60 ml',style:
                          TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.white),),
+                         SizedBox(height: height * .08,),
+                         Container(
+                           width: width,
+                           child: Row(
+                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                             children: [
+                                Container(
+                                  padding:const  EdgeInsets.symmetric(vertical: 20,horizontal: 50),
+                                  decoration: BoxDecoration(
+                                    color:const  Color.fromARGB(255, 50, 54, 56),
+                                    borderRadius: BorderRadius.circular(18),
+                                  ),
+                                  child:const  Text('Add to cart',
+                                    style: TextStyle(color: AppColors.whiteColor,fontSize: 20,fontWeight: FontWeight.bold,letterSpacing: 1),),
+                                ),
+                               Container(
+                                 padding:const  EdgeInsets.all(20),
+                                 decoration: BoxDecoration(
+                                   color:AppColors.orangeColor,
+                                   borderRadius: BorderRadius.circular(18),
+                                 ),
+                                 child:const Icon(Icons.favorite_outline,color: AppColors.whiteColor,)
+                               )
+                             ],
+                           ),
+                         ),
+
                        ],
                      ),
                   ),
