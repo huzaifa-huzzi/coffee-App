@@ -106,8 +106,12 @@ class _DetailScreenState extends State<DetailScreen> {
                          SizedBox(height: height * .02,),
                         Text('Coffee is the major source of antioxidants in the diet.It has many health benefits.',
                           style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16,color: Colors.white.withOpacity(0.4)),),
-
-
+                         SizedBox(height: height * .02,),
+                        const  Text('Volume :',style:
+                         TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.white),),
+                         SizedBox(height: height * .02,),
+                         const  Text('60ml :',style:
+                         TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.white),),
                        ],
                      ),
                   ),
